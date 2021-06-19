@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="Electronic_store.Web" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .container {
+            height: 108px;
+        }
+        .auto-style1 {
+            width: 432px;
+            height: 92px;
+            margin-left: 122px;
+        }
+        .newStyle1 {
+            font-family: cursive;
+        }
+        .newStyle2 {
+            font-family: cursive;
+        }
+        </style>
+    
+</head>
+<body style="background-color:peachpuff">
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+
+                <img alt="" class="auto-style1" src="images/logo.PNG" />
+            </div>
+
+           <div class="menu" style="background-color:peachpuff">
+
+
+               <br />
+               <br />
+               <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lbl_welcome" runat="server" CssClass="newStyle2" style="font-size: large" Text="Welcome" Font-Bold="True" Font-Italic="False"></asp:Label>
+               &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lbl_user" runat="server" CssClass="newStyle2" style="font-size: large" Text="Label" Font-Bold="True" Font-Italic="True"></asp:Label>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btn_login" runat="server" CssClass="button_green"  Text="Login" Width="82px" OnClick="btn_login_Click" />
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btn_register" runat="server" CssClass="button_green" Text="Register" Width="101px" OnClick="btn_register_Click" />
+               &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btn_logout" runat="server" CssClass="button_red" Text="Logout" Width="78px" OnClick="btn_logout_Click" />
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btn_myprofile" runat="server" CssClass="button_green" OnClick="btn_myprofile_Click" Text="My Profile" Width="120px" />
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:ImageButton ID="btn_cart" runat="server" ImageUrl="~/images/Cart.png" OnClientClick="Cart.aspx" OnClick="btn_cart_Click" />
+            </div>
+
+        </div>
+        <hr class="style17">
+        <div style="background-color:peachpuff" class="nav">
+            <ul>
+
+                <li><a class="active" href="Home.aspx">Home</a></li>
+                <li><a href="Products.aspx?id=Mobiles">Mobiles</a></li>
+                <li><a href="Products.aspx?id=Laptops">Laptops</a></li>
+                <li><a href="Products.aspx?id=Home Appliances">Home Appliances</a></li>
+            </ul>
+
+        </div>
+        <br /><br />
+
+        
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        
+
+        <div class="footer">
+            <hr class="style17">
+        </div>
+    </form>
+</body>
+</html>
